@@ -38,13 +38,13 @@ class App extends React.Component<{}, ICounterState> {
         this.state = { count: 0 };
     }
 
-    private _buttonClicked = () => this.setState({ count: this.state.count + 1});
+    private buttonClicked = () => this.setState({ count: this.state.count + 1});
 
     render() {
         return (
             <div>
                 <div>
-                    <TheButton callback={this._buttonClicked} />
+                    <TheButton callback={this.buttonClicked} />
                 </div>
                 <div>
                     <Counter count={this.state.count} />
