@@ -35,19 +35,14 @@ class App extends React.Component<{}, ICounterState> {
 
     constructor(props: any) {
         super(props);
-        this.button_clicked = this.button_clicked.bind(this);
         this.state = { count: 0 };
-    }
-
-    public button_clicked() {
-        this.setState({ count: this.state.count + 1});
     }
 
     public render() {
         return (
             <div>
                 <div>
-                    <TheButton callback={this.button_clicked} />
+                    <TheButton callback={this.buttonClicked} />
                 </div>
                 <div>
                     <Counter count={this.state.count} />
@@ -55,6 +50,8 @@ class App extends React.Component<{}, ICounterState> {
             </div>
         );
     }
+
+    private buttonClicked = () => this.setState({ count: this.state.count + 1});
 }
 
 ReactDOM.render(<App/>, document.getElementById('app'));
