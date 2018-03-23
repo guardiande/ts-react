@@ -9,7 +9,7 @@ class TheButton extends React.Component<IButtonProps> {
         super(props);
     }
 
-    render() {
+    public render() {
         return <button onClick={this.props.callback}>Hit me!</button>;
     }
 }
@@ -22,7 +22,7 @@ class Counter extends React.Component<ICounterProps> {
         super(props);
     }
 
-    render() {
+    public render() {
         return <p>You hit the button {this.props.count} times.</p>;
     }
 }
@@ -38,9 +38,7 @@ class App extends React.Component<{}, ICounterState> {
         this.state = { count: 0 };
     }
 
-    private buttonClicked = () => this.setState({ count: this.state.count + 1});
-
-    render() {
+    public render() {
         return (
             <div>
                 <div>
@@ -52,6 +50,8 @@ class App extends React.Component<{}, ICounterState> {
             </div>
         );
     }
+
+    private buttonClicked = () => this.setState({ count: this.state.count + 1});
 }
 
 ReactDOM.render(<App/>, document.getElementById('app'));
