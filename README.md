@@ -9,7 +9,7 @@ npm run build
 ## Run
 
 ```
-npm run start
+npm start
 ```
 
-... and connect to `http://localhost:8080/`.
+... and connect to `http://localhost:8080/` or `http://0.0.0.0:8080/`
