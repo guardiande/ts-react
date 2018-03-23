@@ -1,0 +1,15 @@
+{
+    "extends": ["tslint:recommended", "tslint:latest", "tslint-react"],
+    "rules": {
+        "arrow-parens": false,
+        "quotemark": false,
+        "max-line-length": false,
+        "no-console": false,
+        "no-submodule-imports": false,
+        "no-empty": false,
+        "object-literal-sort-keys": false,
+        "ordered-imports": false,
+        "trailing-comma": [ true, { "multiline": "never", "singleline": "never" } ],
+        "max-classes-per-file": [true, 5]
+    }
+}
